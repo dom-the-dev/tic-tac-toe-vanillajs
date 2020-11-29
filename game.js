@@ -38,21 +38,21 @@ class Game {
     }
 
     checkIfWon(userVals) {
-        let winning = true;
-        this.winnigValues.forEach(winingString => {
-            if (userVals.length >= winingString.length) {
-                // IF ALL VALUES FROM WININGSTRIN ARE IN USER VALS
-                winning = true;
-            } else {
-                winning = false;
+        let winning = false;
+
+        for (let i = 0; i < this.winnigValues.length; i++) {
+            function isTrue(arrToTest, arr) {
+                return arr.every(i => arrToTest.includes(i))
             }
-        });
+            if (isTrue(userVals, this.winnigValues[i])) {
+                winning = true;
+            }
+        }
 
         return winning;
     }
 
     selectField(field) {
-        console.log('click')
         if (this.turnPlayer === this.player1) {
             field.innerText = 'X';
         } else {
@@ -61,6 +61,7 @@ class Game {
         field.classList.add('game-square--disabled');
 
         let gameWon = this.checkIfWon(this.turnPlayer.addField(field));
+
         if (gameWon) {
             this.finishGame(this.turnPlayer);
         } else {
