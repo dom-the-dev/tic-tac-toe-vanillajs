@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* https://uigradients.com/#IbizaSunset  */
+  background: #ee0979;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.game-field {
+  font-size: 22px;
+  color: white;
+  border-spacing: 4px;
+  display: none;
+}
+
+.game-field--active {
+  display: block;
+}
+
+.game-square {
+  border: 1px solid white;
+  margin: 1px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  cursor: pointer;
+}
+
+.game-square:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.game-square--disabled {
+  cursor: not-allowed;
+}
+
+.game-square--disabled:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+/*# sourceMappingURL=style.css.map */

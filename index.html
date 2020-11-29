@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" />
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Doms Tic Tac Toe</h1>
+		<div class="game-menu">
+			<form action="">
+				<div class="game-menu__playerInput">
+					<label for="player1">Player 1</label>
+					<br />
+					<input class="game-player1" type="text" name="player1" />
+				</div>
+
+				<div class="game-menu__playerInput">
+					<label for="player1">Player 2</label>
+					<br />
+					<input class="game-player2" type="text" name="player1" />
+				</div>
+
+				<div>
+					<h5>Who starts?</h5>
+					<div>
+						<label for="startP1">Player 1</label>
+						<input type="radio" name="startP1" />
+						<label for="startP1">Player 2</label>
+						<input type="radio" name="startP1" />
+					</div>
+				</div>
+				<button id="start-button">start game</button>
+			</form>
+		</div>
+
+		<table class="game-field">
+			<tr class="game-row">
+				<td data-val="1" class="field game-square"></td>
+				<td data-val="2" class="field game-square"></td>
+				<td data-val="3" class="field game-square"></td>
+			</tr>
+			<tr class="game-row">
+				<td data-val="4" class="field game-square"></td>
+				<td data-val="5" class="field game-square"></td>
+				<td data-val="6" class="field game-square"></td>
+			</tr>
+			<tr class="game-row">
+				<td data-val="7" class="field game-square"></td>
+				<td data-val="8" class="field game-square"></td>
+				<td data-val="9" class="field game-square"></td>
+			</tr>
+		</table>
+	</body>
+	<script src="game.js"></script>
+</html>
