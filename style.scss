@@ -8,9 +8,9 @@
 body {
 	height: 100vh;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding-top: 200px;
 
 	/* https://uigradients.com/#IbizaSunset  */
 	background: #ee0979; /* fallback for old browsers */
@@ -24,6 +24,66 @@ body {
 		#ff6a00,
 		#ee0979
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 44px;
+	margin-bottom: 40px;
+}
+
+.game-menu__playerInput {
+	display: flex;
+}
+
+.game-menu__error {
+	color: yellow;
+	text-align: center;
+	margin-bottom: 20px;
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
+.game-menu__input {
+	background-color: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	padding: 10px;
+	margin: 0 4px;
+	color: white;
+	font-size: 16px;
+
+	&:focus {
+		outline: yellow auto 1px;
+	}
+
+	&::placeholder {
+		color: rgba(255, 255, 255, 0.4);
+	}
+}
+
+.button {
+	color: white;
+	background-color: red;
+	border: none;
+	padding: 7px 12px;
+	font-size: 22px;
+	display: block;
+	margin: 20px auto;
+	text-transform: uppercase;
+	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	transition: box-shadow 0.2s ease;
+
+	&:hover {
+		box-shadow: none;
+	}
+
+	&--restart {
+		display: none;
+	}
 }
 
 .game-field {
@@ -58,4 +118,34 @@ body {
 			transform: translateY(0);
 		}
 	}
+}
+
+.players-turn {
+	margin-top: 20px;
+	color: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+}
+
+.game-winner {
+	display: none;
+	margin-bottom: 20px;
+	color: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+
+	&--active {
+		display: block;
+	}
+}
+
+.player-names {
+	display: none;
+	color: rgba(255, 255, 255, 0.4);
+
+	&--active {
+		display: flex;
+	}
+}
+.player-name {
+	margin: 15px;
+	margin-top: 0;
 }

@@ -7,34 +7,42 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<h1>Doms Tic Tac Toe</h1>
+		<h1>Dom's Tic Tac Toe</h1>
 		<div class="game-menu">
 			<form action="">
+				<div class="game-menu__error">Please insert both names</div>
 				<div class="game-menu__playerInput">
-					<label for="player1">Player 1</label>
-					<br />
-					<input class="game-player1" type="text" name="player1" />
+					<input
+						placeholder="Player 1"
+						class="game-menu__input game-player1"
+						type="text"
+						name="player1"
+					/>
+
+					<input
+						placeholder="Player 2"
+						class="game-menu__input game-player2"
+						type="text"
+						name="player2"
+					/>
 				</div>
 
-				<div class="game-menu__playerInput">
-					<label for="player1">Player 2</label>
-					<br />
-					<input class="game-player2" type="text" name="player1" />
-				</div>
-
-				<div>
-					<h5>Who starts?</h5>
-					<div>
-						<label for="startP1">Player 1</label>
-						<input type="radio" name="startP1" />
-						<label for="startP1">Player 2</label>
-						<input type="radio" name="startP1" />
-					</div>
-				</div>
-				<button id="start-button">start game</button>
+				<button id="start-button" class="button">start game</button>
 			</form>
 		</div>
 
+		<div class="player-names">
+			<div class="player-name">
+				Wins <span class="player-1-name"></span>:
+				<span class="wins-player-1">0</span>
+			</div>
+			<div class="player-name">
+				Wins <span class="player-2-name"></span>:
+				<span class="wins-player-2">0</span>
+			</div>
+		</div>
+
+		<h2 class="game-winner"></h2>
 		<table class="game-field">
 			<tr class="game-row">
 				<td data-val="1" class="field game-square"></td>
@@ -52,6 +60,12 @@
 				<td data-val="9" class="field game-square"></td>
 			</tr>
 		</table>
+
+		<h2 class="players-turn"></h2>
+
+		<button id="restart-button" class="button button--restart">
+			restart
+		</button>
 	</body>
 	<script src="game.js"></script>
 </html>
